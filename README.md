@@ -52,12 +52,15 @@ The analysis relies on a rich, multimodal dataset:
 
 The SVI model was successfully calibrated to the raw market data, transforming noisy, discrete quotes into a continuous and theoretically sound surface.
 
-<img width="1014" height="630" alt="output" src="https://github.com/user-attachments/assets/8c005bd2-31b3-4847-ab85-d8fa5e3689ec" />
+
 **Figure 1: SVI Smile Fit**
+<img width="1014" height="630" alt="output" src="https://github.com/user-attachments/assets/8c005bd2-31b3-4847-ab85-d8fa5e3689ec" />
 The model demonstrates a high-fidelity fit to the market data for a single expiration, accurately capturing the "volatility smile" phenomenon.
 
-<img width="893" height="739" alt="output4" src="https://github.com/user-attachments/assets/c48a0aad-2893-4823-942e-49371b863066" />
+
+
 **Figure 2: 3D Implied Volatility Surface**
+<img width="893" height="739" alt="output4" src="https://github.com/user-attachments/assets/c48a0aad-2893-4823-942e-49371b863066" />
 By interpolating the fitted SVI parameters across all expirations, we construct the complete 3D implied volatility surface.
 
 
@@ -65,8 +68,8 @@ By interpolating the fitted SVI parameters across all expirations, we construct 
 
 Deconstructing the 3D surface reveals key insights into the market's expectation of risk over time.
 
-<img width="1009" height="630" alt="output3" src="https://github.com/user-attachments/assets/1cad5ba7-f8af-4086-9638-fa1e80e435bd" />
 **Figure 3: Term Structures of Volatility and Skew**
+<img width="1589" height="590" alt="output1" src="https://github.com/user-attachments/assets/fe4e7dce-97d5-46eb-919d-09eb2e82c2b6" />
 
 
 -   **Volatility Backwardation (Left Plot):** The term structure is steeply inverted, with short-term IV (>70%) far exceeding long-term IV (~64%). This is an anomalous market state signaling acute, near-term fear or uncertainty.
@@ -76,9 +79,8 @@ Deconstructing the 3D surface reveals key insights into the market's expectation
 
 The project's key finding comes from comparing the market's *expectation* of volatility (IV) with historical *reality* (RV). The analysis was contextualized to the period following the "Black Thursday" crash of 2020.
 
-<img width="1589" height="590" alt="output1" src="https://github.com/user-attachments/assets/fe4e7dce-97d5-46eb-919d-09eb2e82c2b6" />
 **Figure 4: Volatility Risk Premium (VRP) Analysis**
-
+<img width="1009" height="630" alt="output3" src="https://github.com/user-attachments/assets/1cad5ba7-f8af-4086-9638-fa1e80e435bd" />
 
 The analysis uncovered a **profoundly negative Volatility Risk Premium averaging -42.26 percentage points**. The realized volatility (green line) from the recent past was dramatically higher than the implied volatility (blue line) being priced for the future. This rare anomaly signifies a market regime of extreme complacency or disbelief, where options were trading at a deep discount to recently observed risk.
 
@@ -86,8 +88,8 @@ The analysis uncovered a **profoundly negative Volatility Risk Premium averaging
 
 To validate the SVI model, its implied Vega was compared against the exchange's benchmark.
 
-<img width="841" height="547" alt="output2" src="https://github.com/user-attachments/assets/642833d7-1ca1-483a-ab48-8f43956da006" />
 **Figure 5: Vega Comparison**
+<img width="841" height="547" alt="output2" src="https://github.com/user-attachments/assets/642833d7-1ca1-483a-ab48-8f43956da006" />
 
 
 The results show a strong linear agreement, validating the SVI model's consistency. However, a slight, systematic bias was detected, quantitatively demonstrating the concept of **model risk** and its implications for practical hedging strategies.
